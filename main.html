@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>XML Parsing from jQuery</title>
+	<script type="text/javascript" src="jquery-latest.min.js"></script>
+	<script type="text/javascript" src="asmt3.js"></script>
+	<style type="text/css">
+		#weather {
+			background-color: lightBlue;
+			border: 1px solid darkBlue;
+			border-radius: 5px;
+			padding: 5px;
+			width: 300px;
+			float: right;
+			display: none;
+		}
+		#prices {
+			float: left;
+			width: 700px;
+		}
+		table {
+			border: 1px solid darkBlue;
+			border-collapse: collapse;
+			width: 650px;}
+		td {
+			border: 1px solid darkBlue;
+			padding: 5px;
+		}
+		tr:nth-child(2n) {
+			background-color: white;
+		}
+		tr:nth-child(2n+1) {
+			background-color: lightBlue;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<div id="weather"></div>
+	<div id="prices"></div>
+	<button id="goButton">Go</button>
+</body>
+</html>

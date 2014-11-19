@@ -1,0 +1,26 @@
+# general tasks
+task :default => [ :gen ]
+task :freshen => [ :clean, :gen]
+task :clean do
+	%x[ rm -rf www/*]
+end
+
+# generation
+task :gen => [ :gen_images, :gen_html]
+task :gen_images do
+	%x[ tool/gen_icon.sh]
+end
+task :gen_html do
+	%x[ cp -r src/* www]
+end
+
+# deployment/testing
+task :test => :deploy_local
+task :deploy_local do
+	%x[ sudo rm -rf /srv/http/*]
+	%x[ sudo cp -r www/* /srv/http]
+	%x[ sudo chmod og+r -R /srv/http]
+end
+task :deploy_whitebox do
+	%x[ scp -r www/* whitebox-root:/var/www/src/]
+end
