@@ -1,0 +1,36 @@
+#weather {
+	background-color: lightBlue;
+	border: 1px solid darkBlue;
+	border-radius: 5px;
+	padding: 5px;
+	width: 300px;
+	float: right;
+	display: none;
+}
+#prices {
+	float: left;
+	width: 700px;
+	display: none;
+}
+#map-canvas {
+	width: 400px;
+	height: 400px;
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border: 1px solid darkBlue;
+	border-collapse: collapse;
+	width: 650px;}
+td {
+	border: 1px solid darkBlue;
+	padding: 5px;
+}
+tr:nth-child(2n) {
+	background-color: white;
+}
+tr:nth-child(2n+1) {
+	background-color: lightBlue;
+	color: black;
+}
